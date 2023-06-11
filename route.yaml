@@ -1,0 +1,34 @@
+piVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2023-06-11T10:36:56Z"
+    labels:
+      app: app
+    name: app
+    namespace: devops-practice
+    resourceVersion: "478538"
+    uid: 30295470-0b93-4a42-99e4-3061ba2e377e
+  spec:
+    clusterIP: 10.217.5.33
+    clusterIPs:
+    - 10.217.5.33
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: 80-80
+      port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      deployment: nginx
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+kind: List
+metadata:
+  resourceVersion: ""
